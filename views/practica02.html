@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+   
+    <script src="../js/axios.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Práctica 2 / Alumnos</title>
+</head>
+<body onload="mostrarT()" style="background-color: rgb(203, 236, 251); ">
+    <div class="container">
+
+        <br><br>
+        <center>
+            <h2>
+                Administración de alumnos UPSIN
+            </h2>
+            </center>
+       
+        
+        <section id="datos">
+            <div>
+                <form>
+                    <div>
+                        <br>
+                        <hr> 
+                        <button id="btnBuscar" onclick="buscar()" style="float:left;" class="btn btn-info">Buscar</button>
+                        <input type="number" name="matricula" id="matricula" placeholder="Matricula" required="true" style="margin-left: 5px;">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="true" style="margin-left: 5px;">
+                        <input type="text" name="domicilio" id="Domicilio" placeholder="Domicilio" required="true" style="margin-left: 5px;">
+                        <select name="sexo" id="sexo" required="true" style="margin-left: 5px;">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                        <select name="especialidad" id="Especialidad" required="true">
+                            <option value="" disabled selected>Seleccione una especialidad</option>
+                            <option value="Ingeniería en Tecnologías de la Información">Ing. en Tecnologías de la Información</option>
+                            <option value="Ingeniería en Biotecnología">Ing. en Biotecnología</option>
+                            <option value="Ingeniería Mecatrónica">Ing. Mecatrónica</option>
+                            <option value="Ingeniería en Energía">Ing. en Energía</option>
+                            <option value="Ingeniería en Logística y Transporte">Ing. en Logística y Transporte</option>
+                            <option value="Ingeniería en Tecnología Ambiental">Ing. en Tecnología Ambiental</option>
+                            <option value="Ingeniería en Animación y Efectos Visuales">Ing. en Animación y Efectos Visuales</option>
+                            <option value="Ingeniería en Nanotecnología">Ing. en Nanotecnología</option>
+                            <option value="Licenciatura en Terapia Física">Lic. en Terapia Física</option>
+                            <option value="Licenciatura en Administración y Gestión Empresarial">Lic. en Administración y Gestión Empresarial</option>
+                        </select>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <center>
+            <div>
+                <button id="btnAgregar" onclick="agregarAlumno()" class="btn btn-success">Agregar</button>
+                <button id="btnBorrar" onclick="eliminar()" class="btn btn-success">Borrar</button>
+                <button id="btnModificar" onclick="modificar()" class="btn btn-success">Modificar</button>
+            </div>
+        </center>
+
+        </section>
+        <section id="lista">
+            <br><br>
+            <center>
+            <h2>
+                Listado de alumnos
+            </h2>
+            </center>
+            <br><br>
+            <table class="table" id="tabla">
+               <tr>
+                    <th>Id</th>
+                    <th>Matricula</th>
+                    <th>Nombre</th>
+                    <th>Domicilio</th>
+                    <th>Sexo</th>
+                    <th>Especialidad</th>
+               </tr>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
